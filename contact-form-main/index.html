@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="toast hidden">
+      <div>
+        <img src="./assets/images/icon-success-check.svg" alt="check icon" />
+        <span>Message Sent!</span>
+      </div>
+
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    <div class="form__container">
+      <h1>Contact Us</h1>
+      <form class="form">
+        <div class="name__inputs">
+          <div class="form__group">
+            <label for="first">
+              First Name <span class="star">*</span>
+              <input
+                type="text"
+                id="first__name"
+                aria-required="true"
+                name="first"
+              />
+              <span class="firtsError hidden">This field is required</span>
+            </label>
+          </div>
+
+          <div class="form__group">
+            <label for="last">
+              Last Name <span class="star">*</span>
+              <input
+                type="text"
+                id="last__name"
+                aria-required="true"
+                name="last"
+              />
+              <span class="lastError hidden">This field is required</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="from__group">
+          <label for="email">
+            Email Address <span class="star">*</span>
+            <input type="email" id="email" aria-required="true" name="email" />
+            <span class="emailError valid hidden"
+              >Please enter a valid email address</span
+            >
+            <span class="error empty hidden">This field is required</span>
+          </label>
+        </div>
+
+        <div class="from__group radio">
+          <label for="query">
+            Query Type <span class="star">*</span>
+            <div id="query">
+              <div class="query__type">
+                <input
+                  type="radio"
+                  value="GeneralEnquiry"
+                  id="GeneralEnquiry"
+                  name="query"
+                  aria-required="true"
+                />
+                <label for="GeneralEnquiry">General Enquiry</label>
+              </div>
+              <div class="query__type">
+                <input
+                  type="radio"
+                  value="SupportRequest"
+                  id="SupportRequest"
+                  name="query"
+                  aria-required="true"
+                />
+                <label for="SupportRequest">Support Request</label>
+              </div>
+            </div>
+            <span class="queryError hidden">Please select a query type</span>
+          </label>
+        </div>
+
+        <div class="from__group">
+          <label for="message">
+            Message <span class="star">*</span>
+            <textarea
+              name="message"
+              rows="4"
+              id="message"
+              aria-required="true"
+            ></textarea>
+            <span class="messageError hidden">This field is required</span>
+          </label>
+        </div>
+
+        <div class="from__group checkbox">
+          <div>
+            <input
+              type="checkbox"
+              id="consent"
+              aria-required="true"
+              name="consent"
+            />
+            <label for="consent"
+              >I consent to being contacted by the team</label
+            >
+            <span class="star">*</span>
+          </div>
+          <span class="checkError hidden"
+            >To submit this form, please consent to being contacted</span
+          >
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Javier Casafranca Paredes</a>.
+    </div> -->
+    <script src="./index.js"></script>
+  </body>
+</html>
